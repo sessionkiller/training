@@ -4,7 +4,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --ci",
     "test:ui-jest": "jest --config=\"./jest.config.js\" --testPathPattern=\".*ui-jest\\.spec\\..*\" --testEnvironment=\"jsdom\"",
     "test:unit": "jest --config=\"./jest.config.js\" --testPathPattern=\".*unit\\.spec\\..*\" --env=node",
     "test:ci": "jest --ci"
