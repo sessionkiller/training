@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<DocumentFragment>
+  <div>
+    <h1>
+      Rick and Morty Characters
+    </h1>
+    <div
+      style="display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px;"
+    >
+      <div>
+        <img
+          alt="Rick Sanchez"
+          src="rick.png"
+          style="width: 100%;"
+        />
+        <p>
+          Rick Sanchez
+        </p>
+      </div>
+      <div>
+        <img
+          alt="Morty Smith"
+          src="morty.png"
+          style="width: 100%;"
+        />
+        <p>
+          Morty Smith
+        </p>
+      </div>
+    </div>
+    <div>
+      <button
+        disabled=""
+      >
+        Previous
+      </button>
+      <button>
+        Next
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;
