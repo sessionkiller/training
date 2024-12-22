@@ -2,6 +2,7 @@ import { GetServerSideProps } from "next";
 import { useState } from "react";
 import styled from "styled-components";
 import CharacterModal from "@/components/character-modal";
+import { cacheFetch } from "utils/cacheFetch";
 
 // Styled Components
 const Container = styled.div`
@@ -77,19 +78,25 @@ export default function CharacterList({ initialData }: { initialData: any }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const fetchCharacters = async (url: string) => {
-    const response = await fetch(url);
-    const data = await response.json();
-    setCharacters(data.results);
-    setInfo(data.info);
+    try {
+      const data = await cacheFetch(url);
+      setCharacters(data.results);
+      setInfo(data.info);
+    } catch (error) {
+      console.error("Failed to fetch characters:", error);
+    }
   };
 
   const openModal = async (id: number) => {
-    const response = await fetch(
-      `https://rickandmortyapi.com/api/character/${id}`
-    );
-    const data = await response.json();
-    setSelectedCharacter(data);
-    setIsModalOpen(true);
+    try {
+      const data = await cacheFetch(
+        `https://rickandmortyapi.com/api/character/${id}`
+      );
+      setSelectedCharacter(data);
+      setIsModalOpen(true);
+    } catch (error) {
+      console.error("Failed to fetch character details:", error);
+    }
   };
 
   return (
