@@ -2,41 +2,58 @@
 
 exports[`matches snapshot 1`] = `
 <DocumentFragment>
-  <div>
-    <h1>
+  <div
+    class="sc-ivxoEo kMmNve"
+  >
+    <h1
+      class="sc-ghWlax gLzocQ"
+    >
       Rick and Morty Characters
     </h1>
     <div
-      style="display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px;"
+      class="sc-kLhKbu bIdqYx"
     >
-      <div>
+      <div
+        class="sc-ixGGxD drxqNd"
+      >
         <img
           alt="Rick Sanchez"
+          class="sc-khLCKb gnBVMO"
           src="rick.png"
-          style="width: 100%;"
         />
-        <p>
+        <p
+          class="sc-dstKZu cYWaNR"
+        >
           Rick Sanchez
         </p>
       </div>
-      <div>
+      <div
+        class="sc-ixGGxD drxqNd"
+      >
         <img
           alt="Morty Smith"
+          class="sc-khLCKb gnBVMO"
           src="morty.png"
-          style="width: 100%;"
         />
-        <p>
+        <p
+          class="sc-dstKZu cYWaNR"
+        >
           Morty Smith
         </p>
       </div>
     </div>
-    <div>
+    <div
+      class="sc-keTIit icbnmb"
+    >
       <button
+        class="sc-dpBQxM jrhPUO"
         disabled=""
       >
         Previous
       </button>
-      <button>
+      <button
+        class="sc-dpBQxM cTIymj"
+      >
         Next
       </button>
     </div>
