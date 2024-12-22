@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import { axe } from "jest-axe";
-import CharacterList from "@/pages/characters";
+import CharacterList from "../pages";
 
 const mockData = {
   results: [

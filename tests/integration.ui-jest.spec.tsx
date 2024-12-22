@@ -1,5 +1,5 @@
 import { render, screen, fireEvent } from "@testing-library/react";
-import CharacterList from "@/pages/characters";
+import CharacterList from "../pages";
 
 const mockData = {
   results: [{ id: 1, name: "Rick Sanchez", image: "rick.png" }],
