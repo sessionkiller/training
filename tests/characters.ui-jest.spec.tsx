@@ -22,6 +22,7 @@ test("renders character list", () => {
 test("handles pagination buttons", async () => {
   global.fetch = jest.fn((): any =>
     Promise.resolve({
+      ok: true,
       json: () => Promise.resolve(mockData),
     })
   );
@@ -29,7 +30,7 @@ test("handles pagination buttons", async () => {
   const { getByText } = render(<CharacterList initialData={mockData} />);
   const nextButton = getByText("Next");
   nextButton.click();
-  expect(global.fetch).toHaveBeenCalledWith(mockData.info.next);
+  expect(global.fetch).toHaveBeenCalledWith(mockData.info.next, undefined);
 });
 
 test("matches snapshot", () => {

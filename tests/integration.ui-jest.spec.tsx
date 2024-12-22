@@ -8,6 +8,7 @@ const mockData = {
 
 global.fetch = jest.fn((): any =>
   Promise.resolve({
+    ok: true,
     json: () =>
       Promise.resolve({
         name: "Rick Sanchez",

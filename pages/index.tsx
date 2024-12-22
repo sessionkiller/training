@@ -2,7 +2,7 @@ import { GetServerSideProps } from "next";
 import { useState } from "react";
 import styled from "styled-components";
 import CharacterModal from "@/components/character-modal";
-import { cacheFetch } from "utils/cacheFetch";
+import { cacheFetch } from "@/utils/cacheFetch";
 
 // Styled Components
 const Container = styled.div`
